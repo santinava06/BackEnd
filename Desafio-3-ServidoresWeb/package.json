@@ -1,0 +1,22 @@
+{
+  "name": "desafio-3-servidoresweb",
+  "version": "1.0.0",
+  "description": "desafio 3 servidor con  express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/santinava06/BackEnd.git"
+  },
+  "author": "Santiago Navarro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/santinava06/BackEnd/issues"
+  },
+  "homepage": "https://github.com/santinava06/BackEnd#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
