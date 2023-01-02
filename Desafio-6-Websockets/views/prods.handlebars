@@ -1,0 +1,9 @@
+<div>
+    {{#each productos}}
+        <div class="row ms-2 mt-1">
+            <p class="col-4">{{this.title}}</p>
+            <p class="col-4">{{this.price}}</p>
+            <img src={{this.thumbnail}} alt="" style="width: 100px;">
+        </div>
+    {{/each}}
+</div>

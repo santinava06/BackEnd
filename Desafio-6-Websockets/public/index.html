@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket</title>
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js" integrity="sha384-/KNQL8Nu5gCHLqwqfQjA689Hhoqgi2S84SNUxC3roTe4EhJ9AfLkp8QiQcU8AMzI" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1 class="titulo">Tienda Online</h1>
+    <h2>Producto:</h2>
+    <form id="boton" action="/productos" method="POST">
+        Titulo <input type="text" name="title">
+        Precio <input type="number" name="price">
+        Imagen <input type="text" name="thumbnail">
+        <button >Submit</button>
+    </form>
+    
+    <a href="/productos">Products List</a>
+
+    <h2>Chat</h2>
+    <input id="message" type="text">
+    <button onclick="onClick()">Send</button>
+    <p id="messagesView"></p>
+
+    <script>
+        const client = io()
+        console.log(client);
+        client.on("messagesUpdate", (data)=>{
+            console.log(data);
+            document.getElementById("messagesView").innerHTML = data
+        })
+
+        const onClick = () => {
+            const messageToSend = document.getElementById("message").value
+            console.log({messageToSend});
+            client.emit("mensaje", messageToSend)
+            document.getElementById("message").value = ""
+        }
+    </script>
+</body>
+</html>
