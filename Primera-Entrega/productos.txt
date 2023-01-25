@@ -1,0 +1,18 @@
+[
+  {
+    "probando": "xd",
+    "asd": 15,
+    "id": 1
+  },
+  {
+    "probando": "ATOEJNQ",
+    "asd": 184,
+    "id": 2
+  },
+  {
+    "title": "af1",
+    "price": 150,
+    "thumbnail": "OG",
+    "id": 3
+  }
+]
