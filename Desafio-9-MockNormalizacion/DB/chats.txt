@@ -1,0 +1,31 @@
+[
+  {
+    "id": "mensajes",
+    "mensajes": [
+      {
+        "author": {
+          "id": "sncarp2003@gmail.com",
+          "nombre": "Santiago",
+          "apellido": "Navarro",
+          "edad": "19",
+          "alias": "Santinava06",
+          "avatar": "https://www.google.es/search?q=perro+salchicha&tbm=isch&ved=const%20fs%20=%20require%20(%27fs%27)%20const%20{faker}%20=%20require%20(%27@faker-js/faker%27)%20faker.locale%20=%20%27es%27%20//normalizr%20const%20normalizr%20=%20require(%27normalizr%27);%20const%20normalize%20=%20normalizr.normalize;%20const%20denormalize%20=%20normalizr.denormalize;%20const%20schema%20=%20normalizr.schema;%20//util%20const%20util%20=%20require(%27util%27)%20module.exports%20=%20class%20DBHandler%20{%20constructor(options,%20tabla)%20{%20this.knex%20=%20require(%27knex%27)(options)%20this.tabla%20=%20tabla%20}%20async%20fileChecker()%20{%20const%20fileStructure=%20`%20[%20{%20%22id%22:%20%22mensajes%22,%20%22mensajes%22:%20[%20]%20}%20]%20`%20if(!fs.existsSync(%22./DB/chats.txt%22)){%20try{%20await%20fs.promises.writeFile(%27./DB/chats.txt%27,%20fileStructure)%20}%20catch(error)%20{%20console.log(%27error!:%20%27,error)%20}%20}%20}%20async%20saveChat%20(object)%20{%20await%20this.fileChecker()%20try{%20const%20datos%20=%20await%20fs.promises.readFile(%22./DB/chats.txt%22,%20%27utf-8%27)%20const%20data%20=%20JSON.parse(datos)%20const%20ids%20=%20data[0].mensajes.map((mensajes)%20=%3E%20mensajes.id);%20const%20idMaximo%20=%20Math.max(...ids);%20object.id%20=%20idMaximo%20+%201%20data[0].mensajes.push(object)%20await%20fs.promises.writeFile(%22./DB/chats.txt%22,%20JSON.stringify(data,%20null,%202))%20}%20catch(error)%20{%20console.log(%27error!:%20%27,error)%20}%20}%20async%20getChat%20()%20{%20await%20this.fileChecker()%20try{%20const%20datos%20=%20await%20fs.promises.readFile(%22./DB/chats.txt%22,%20%27utf-8%27)%20const%20data%20=%20JSON.parse(datos)%20//normalizaci%C3%B3n%20de%20datos%20const%20author%20=%20new%20schema.Entity(%27authors%27,{},{%20idAttribute:%20%22id%22%20})%20const%20mensaje%20=%20new%20schema.Entity(%27mensajes%27,{%20author:%20author,%20})%20const%20chat%20=%20new%20schema.Entity(%27chat%27,%20{%20mensajes:%20[mensaje]%20})%20const%20normalizedData%20=%20normalize(data[0],%20chat)%20const%20normalizedDataJSON%20=%20JSON.stringify(normalizedData)%20//se%20env%C3%ADan%20datos%20normalizados%20al%20frontend%20return%20normalizedDataJSON%20}%20catch(error)%20{%20console.log(%27error!:%20%27,error)%20}%20}%20print%20(objeto)%20{%20console.log(util.inspect(objeto,%20true,%2012,%20true))%20}%20//nota:%20en%20este%20caso%20la%20tabla%20ser%C3%A1%20alojada%20dentro%20de%20la%20base%20de%20datos%20%22test%22%20de%20MySQL%20async%20saveProduct(object)%20{%20try%20{%20await%20this.knex(this.tabla).insert(object)%20}%20catch%20(error)%20{%20console.log(%27error!:%20%27,%20error)%20}%20}%20async%20getAll()%20{%20try%20{%20let%20result%20=%20await%20this.knex.from(this.tabla).select(%22*%22)%20return%20result%20}%20catch%20(error)%20{%20console.log(%27error!:%20%27,%20error)%20}%20}%20//randomizador%20de%20productos%20de%20prueba%20(faker)%20async%20randomProducts()%20{%20let%20objetos%20=%20[]%20for%20(let%20i%20=%200;%20i%20%3C%205;%20i++)%20{%20let%20titulo%20=%20faker.commerce.productName();%20let%20precio%20=%20(Math.floor(Math.random()%20*%2015)%20+%205).toFixed(2)%20let%20imgUrl%20=%20faker.image.technics(150,%20150,%20true);%20objetos.push({title:%20titulo,%20price:%20precio,%20thumbnail:%20imgUrl})%20}%20return%20objetos%20}%20}-cCegQIABAA&oq=perro+&gs_lcp=CgNpbWcQARgAMgcIABCxAxBDMgcIABCxAxBDMgQIABBDMgQIABBDMgcIABCxAxBDMgQIABBDMgQIABBDMgQIABBDMgQIABBDMgQIABBDOggIABCABBCxAzoFCAAQgAQ6CAgAELEDEIMBULQIWM0UYNUdaAJwAHgAgAFTiAHlBZIBAjEwmAEAoAEBqgELZ3dzLXdpei1pbWewAQDAAQE&sclient=img&ei=U_jrY7aqGZnU1sQPic-VuAk&bih=841&biw=1707#imgrc=jA57zsBCusOMQM"
+        },
+        "text": "Hola  soy un salchicha",
+        "id": null
+      },
+      {
+        "author": {
+          "id": "jorge-barrio@yahoo.com.ar",
+          "nombre": "Jorge",
+          "apellido": "Barrionuevo",
+          "edad": "35",
+          "alias": "Barrio02",
+          "avatar": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png"
+        },
+        "text": "Necesito 2 hamburguesas",
+        "id": 1
+      }
+    ]
+  }
+]

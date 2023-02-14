@@ -1,0 +1,161 @@
+.body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.titulo{
+    color: darkblue;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid darkblue;
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 10px 0;
+}
+.input{
+    text-align: center;
+    background-color: azure;
+    border: 1px solid rgb(151, 150, 150);
+}
+
+.btn{
+    background-color: papayawhip;
+    padding: 5px;
+    width: fit-content;
+    border-radius: 5px;
+    border: none;
+    transition: 0.25s ease-in-out;
+}
+
+.btn:hover{
+    transition: all 0.25s ease-in-out;
+    background-color: papayawhip;
+}
+
+.table{
+    width: fit-content;
+}
+.tr1{
+    background-color:orange;
+}
+.tr2{
+    background-color:orange;
+    transition: all 0.5s, ease-in-out;
+}
+.th1{
+    border-radius: 5px;
+    width: 250px;
+}
+.th2{
+    border-radius: 5px;
+    width: 75px;
+}
+.th3{
+    border-radius: 5px;
+    width: 150px;
+}
+.td1{
+    border-radius: 5px;
+    width: 250px;
+    text-align: center;
+}
+.td2{
+    border-radius: 5px;
+    width: 75px;
+    text-align: center;
+}
+.td3{
+    border-radius: 5px;
+    width: 150px;
+    text-align: center;
+}
+.tr2:hover{
+    transition: all 0.5s, ease-in-out;
+    background-color:papayawhip;
+}
+.img{
+    width: 50px;
+}
+.inputs{
+    margin: 10px 0
+}
+
+.chat-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 10px;
+    margin: 10px 0;
+    align-items: center;
+    width: 90%;
+    background-color: papayawhip;
+    border-radius: 10px;
+}
+
+/* parametros específicos para la las tarjetas de mensajería. */
+
+.messages-container{
+    display: flex;
+    border: 1px solid darkblue;
+    flex-direction: column;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.mensajes{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    border: 1px solid blue;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: papayawhip;
+}
+
+.message-cont{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    margin: 3px 0px;
+    border: 1px solid cyan;
+    padding: 3px;
+    border-radius: 7px;
+}
+
+.messenger{
+    display: flex;
+    flex-direction: row;
+}
+
+.avatar-img{
+    width: 100px;
+    border-radius: 10px;
+}
+
+.avatar-container{
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.messenger-card{
+    display: flex;
+    flex-direction: column;
+    padding: 3px;
+    justify-content: center;
+}
+
+.mensaje{
+    border: 1px solid blue;
+    margin: 4px;
+    border-radius: 6px;
+    padding: 4px;
+}
